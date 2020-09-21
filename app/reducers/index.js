@@ -1,8 +1,8 @@
-const stockTicker = (state = {}, action) => {
-    switch (action.type) {
-        default:
-            return state;
-    }
-};
+import  timerReducer  from './timerReducer';
+import { combineReducers } from 'redux';
 
-export default stockTicker;
+const redusers = combineReducers  ({
+    timerReducer: timerReducer,
+})
+
+export default redusers;

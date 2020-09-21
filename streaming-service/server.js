@@ -56,7 +56,13 @@ function trackTicker(socket, ticker) {
     getQuote(socket, ticker);
   }, FETCH_INTERVAL);
 
+  socket.on('changeInterval', function(newIntetval) {
+    clearInterval(timer);
+    timer = setInterval(function() {getQuote(socket, ticker);}, newIntetval)
+  });
+
   socket.on('disconnect', function() {
+    console.log('ОТКЛЮЧИЛСЯ СЕРВЕР');
     clearInterval(timer);
   });
 }

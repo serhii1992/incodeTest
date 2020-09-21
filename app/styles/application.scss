@@ -1,3 +1,79 @@
-.stock-ticker {
+.wrapperApp {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
+.stock-ticker {
+	position: relative;
+	height: 200px;
+	width: 364px;
+	margin: 10px;
+	font-size: 24px;
+	color: black;
+	background-color: cadetblue;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	.priceBlock {
+		margin: 15px;
+	}
+
+	.redBgPrice {
+		transition: background-color 0.1s ease;
+		background-color: red;
+		opacity: 0.7;
+		filter: alpha(Opacity=20);
+	}
+
+	.greenBgPrice {
+		transition: background-color 0.1s ease;
+		background-color: green;
+		opacity: 0.7;
+		filter: alpha(Opacity=20);
+	}
+
+	.exchange {
+		margin: 15px;
+	}
+
+	.lastTradeTime {
+		margin: 15px;
+	}
+}
+
+.selectInterval {
+	font-size: 16px;
+	padding: 2px;
+	color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.intervalPopup {
+	padding: 1px;
+	position: absolute;
+    top: 97px;
+    left: 305px;
+	background-color: cornflowerblue;
+
+	.intervalPopup_item {
+		font-size: 16px;
+		line-height: 20px;
+		width: 100px;
+		text-align: center;
+		height: 20px;
+		margin: 0px 2px;
+		cursor: pointer;
+		border-radius: 5px;
+		&:hover {
+			background-color: cornsilk;
+		}
+	}
+	.active {
+		font-weight: 700;
+		background-color: blue;
+	}
 }
